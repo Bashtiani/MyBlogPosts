@@ -7,16 +7,17 @@ function BlogPost({ author, title, excerpt }) {
   return (
     <li className="blogsWrapper">
       <div className="blog">
-        <div className="imageWrapper">
-          <img
-            className="authorImage"
-            src={`https://joeschmoe.io/api/v1/${author}`}
-            alt="Author"
-          />
-          <p variant="body">{author}</p>
+        <div className="titleWrapper">
+          <div className="imageWrapper">
+            <img
+              className="authorImage"
+              src={`https://joeschmoe.io/api/v1/${author}`}
+              alt="Author"
+            />
+            <p variant="body">{author}</p>
+          </div>
+          <h2>{title}</h2>
         </div>
-
-        <h2>{title}</h2>
         <p className="excerpt">{excerpt}</p>
       </div>
     </li>
